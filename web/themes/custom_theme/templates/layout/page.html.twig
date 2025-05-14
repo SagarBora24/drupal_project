@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ base_path ~ directory }}/css/style.css">
+    <title>{{ site_name }}</title>
+
+  
+</head>
+<body>
+    <header role="banner">
+      {% if page.primary_menu %}
+        <nav class="main-navigation" role="navigation">
+          {{ page.primary_menu }}
+        </nav>
+      {% endif %}
+    </header>
+   {% if page.content %}
+        
+          {{ page.content }}
+
+      {% endif %}
+</body>
+</html>

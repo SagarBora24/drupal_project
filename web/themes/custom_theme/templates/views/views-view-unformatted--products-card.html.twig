@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="product-column-list">
+  {% for row in rows %}
+    {% set product = row.content['#row']._entity %}
+    <div class="product-card">
+      <div class="card">
+        <img src="{{ file_url(product.field_product_image.entity.fileuri) }}" alt="{{ product.label }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.label }}</h5>
+          <p class="card-description">{{ product.field_product_descriptions.value }}</p>
+          <p class="card-price">Price: {{ product.field_product_price.value }}</p>
+          <a href="{{ path('entity.node.canonical', {'node': product.id}) }}" class="btn btn-primary">View Product</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
