@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ base_path ~ directory }}/css/style.css">
+    <title>{{ site_name }}</title>
+
+    {# {% if not logged_in %}
+      <script>
+        window.location.href = "{{ path('custom_login.form') }}";
+      </script>
+    {% endif %} #}
+    
+<body>
+    <header role="banner">
+      {% if page.primary_menu %}
+        <nav class="main-navigation" role="navigation">
+          {{ page.primary_menu }}
+          {# {% if logged_in %}
+            <a href="{{ path('custom_module.logout') }}" class="nav-link">Logout</a>
+          {% else %}
+            <a href="{{ path('custom_login.form') }}" class="nav-link">Login</a>
+          {% endif %} #}
+
+        </nav>
+      {% endif %}
+    </header>
+
+     {% if page.secondary_menu %}
+        
+          {{ page.secondary_menu }}
+
+      {% endif %}
+   
+       {% if page.content %}
+        
+          {{ page.content }}
+
+      {% endif %}
+  
+</body>
+</html>

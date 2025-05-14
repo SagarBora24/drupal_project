@@ -1,0 +1,43 @@
+ <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for item in content.field_carousel_block_field['#items'] %}
+      {% set paragraph = item.entity %}
+      <div class="carousel-item {{ loop.first ? 'active' }}">
+        
+        {# Image #}
+        {% if paragraph.field_carousel_image.entity is not empty %}
+          <img src="{{ file_url(paragraph.field_carousel_image.entity.fileuri) }}" class="d-block w-100" alt="{{ paragraph.field_carousel_image.alt }}">
+        {% endif %}
+
+        <div class="carousel-caption d-none d-md-block">
+          
+          {# Title #}
+          {% if paragraph.field_carousel_title.value is not empty %}
+            <h5>{{ paragraph.field_carousel_title.value }}</h5>
+          {% endif %}
+
+          {# Description #}
+          {% if paragraph.field_carousel_description.value is not empty %}
+            <p>{{ paragraph.field_carousel_description.value }}</p>
+          {% endif %} 
+
+          {# Link (if available) #}
+          {% if paragraph.field_carousel_link.uri is not empty %}
+            <a href="{{ paragraph.field_carousel_link.uri }}" class="btn btn-primary">
+              {{ paragraph.field_carousel_link.title ?: 'Learn More' }}
+            </a>
+          {% endif %}
+
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
