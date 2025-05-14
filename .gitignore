@@ -9,11 +9,11 @@
 /web/sites/*/default.services*.yml
 
 # Ignore paths that may contain user-generated content
-# /web/sites/*/files
-# /web/sites/*/public
-# /web/sites/*/private
-# /web/sites/*/files-public
-# /web/sites/*/files-private
+/web/sites/*/files
+/web/sites/*/public
+/web/sites/*/private
+/web/sites/*/files-public
+/web/sites/*/files-private
 
 # Ignore paths that may contain temporary files
 /web/sites/*/translations

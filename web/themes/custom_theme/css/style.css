@@ -1,0 +1,264 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  #main-content{
+    display: none;
+  }
+/* Reset basic nav styling */
+/* Reset basic nav styling */
+.main-navigation {
+    background-color: #004080;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .main-navigation li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-navigation a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .main-navigation a:hover,
+  .main-navigation a.is-active {
+    background-color: #0066cc;
+    color: #ffffff;
+    border-bottom: 3px solid #ffcc00;
+  }
+  
+  /* Carousel Css */
+  /* Ensure consistent size for carousel */
+#carouselExample {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    height: 100%;
+  }
+  
+  /* Make sure image covers the area */
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Position caption in the center */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Style title and description */
+  .carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+  
+  /* Style the button */
+  .carousel-caption a.btn {
+    margin-top: 10px;
+  }
+  
+  /* Position nav buttons above the image */
+  .carousel-control-prev,
+  .carousel-control-next {
+    z-index: 10;
+    top: 20px;
+    bottom: auto;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 60% 60%;
+  }
+
+  /* Css for product card */
+  
+  .product-column-list {
+    display: flex;
+    
+  }
+  
+  .product-card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-column-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .product-card {
+    flex: 0 0 calc(33.333% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .card-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  /* Single pages */
+  .product-container {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-image {
+    flex: 1;
+  }
+  
+  .product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-intro {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .product-actions .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #1877f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .product-actions .btn:hover {
+    background-color: #155ec4;
+  }
+  
+  /* About us page */
+  .full-width-image img {
+    width: 100%;
+  }
+  

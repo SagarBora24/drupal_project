@@ -1,0 +1,17 @@
+name: My custom theme
+type: theme
+description: 'A custom theme for my Drupal site.'
+core_version_requirement: ^10
+package: Custom
+base theme: bootstrap 
+
+libraries:
+  - custom_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
