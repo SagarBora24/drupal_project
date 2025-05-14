@@ -1,0 +1,30 @@
+uuid: aac23fe9-9546-4339-b532-e0c8347cd99a
+langcode: en-gb
+status: true
+dependencies:
+  content:
+    - 'block_content:home_carousel:5f9a0e20-431c-4479-a536-d68b496bd080'
+  module:
+    - block_content
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_homecarouselblock
+theme: custom_theme
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'block_content:5f9a0e20-431c-4479-a536-d68b496bd080'
+settings:
+  id: 'block_content:5f9a0e20-431c-4479-a536-d68b496bd080'
+  label: 'Home Carousel Block'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home

@@ -1,0 +1,31 @@
+uuid: 89056c20-8db5-4b3a-9ef5-733b83009b43
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - block_content.type.home_carousel
+    - field.storage.block_content.field_carousel_block_field
+    - paragraphs.paragraphs_type.carousel_fields
+  module:
+    - entity_reference_revisions
+id: block_content.home_carousel.field_carousel_block_field
+field_name: field_carousel_block_field
+entity_type: block_content
+bundle: home_carousel
+label: 'Carousel block field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      carousel_fields: carousel_fields
+    negate: 0
+    target_bundles_drag_drop:
+      carousel_fields:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions
