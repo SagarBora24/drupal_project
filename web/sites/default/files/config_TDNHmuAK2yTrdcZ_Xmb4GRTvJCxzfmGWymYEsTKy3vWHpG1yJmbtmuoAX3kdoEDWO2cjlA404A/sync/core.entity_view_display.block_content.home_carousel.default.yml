@@ -1,0 +1,25 @@
+uuid: 2e6d5d0f-7176-458c-8013-b485ef5c2287
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - block_content.type.home_carousel
+    - field.field.block_content.home_carousel.field_carousel_block_field
+  module:
+    - entity_reference_revisions
+id: block_content.home_carousel.default
+targetEntityType: block_content
+bundle: home_carousel
+mode: default
+content:
+  field_carousel_block_field:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

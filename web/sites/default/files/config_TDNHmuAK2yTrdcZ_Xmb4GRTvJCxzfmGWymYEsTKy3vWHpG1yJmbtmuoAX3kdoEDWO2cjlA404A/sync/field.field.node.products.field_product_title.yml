@@ -1,0 +1,19 @@
+uuid: 9f524b73-e58a-4533-86a6-cc9af872810b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_title
+    - node.type.products
+id: node.products.field_product_title
+field_name: field_product_title
+entity_type: node
+bundle: products
+label: 'Product Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
